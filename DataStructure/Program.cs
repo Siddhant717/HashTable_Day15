@@ -6,7 +6,7 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("HashTable Program");
+            Console.WriteLine("HashTable Program- ");
 
             MyMapNode<string, string> hash = new MyMapNode<string, string>(5);
             hash.Add("0", "To");
