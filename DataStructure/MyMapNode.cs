@@ -44,6 +44,26 @@ namespace DataStructure
             KeyValue<K, V> item = new KeyValue<K, V> { Key = key, Value = value };
             linkedList.AddLast(item);
         }
+        public void Remove(K key)
+        {
+            int position = GetArrayPosition((K)key);
+            LinkedList<KeyValue<K, V>> linkedList = GetLinkedList(position);
+            bool itemfound = false;
+            KeyValue<K, V> foundItem = default(KeyValue<K, V>);
+            foreach (KeyValue<K, V> item in linkedList)
+            {
+                if (item.Key.Equals(key))
+                {
+                    itemfound = true;
+                    foundItem = item;
+                }
+            }
+
+            if (itemfound)
+            {
+                linkedList.Remove(foundItem);
+            }
+        }
 
 
         protected LinkedList<KeyValue<K, V>> GetLinkedList(int position)

@@ -2,7 +2,7 @@
 
 namespace DataStructure
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -29,13 +29,21 @@ namespace DataStructure
             hash.Add("17", "avoidable");
             hash.Add("18", "situations");
 
-           
+
             string hash1 = hash.Get("12");
             Console.WriteLine("12th Index Value is :" + hash1);
 
+            Console.WriteLine("---------------------");
+            string hash2 = hash.Get("17");
+            Console.WriteLine("Removed value from Paragraph is: " + hash2);
+            hash.Remove("17");
+
       
-            string hash2 = hash.Get("16");
-            Console.WriteLine("16th Index Value is :" + hash2);
+
+
+
+
+
         }
     }
 }
